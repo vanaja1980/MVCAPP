@@ -1,0 +1,23 @@
+@model System.Collections.Generic.IReadOnlyList<MyMVCApp.Model.Product>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Products";
+}
+
+<main class="py-4">
+    <h1 class="mb-4">Products</h1>
+    <div class="row g-4">
+        @foreach (var product in Model)
+        {
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title h5">@product.name</h2>
+                        <p class="card-text">@product.description</p>
+                        <p class="card-text fw-bold">@product.price.ToString("C")</p>
+                    </div>
+                </article>
+            </div>
+        }
+    </div>
+</main>

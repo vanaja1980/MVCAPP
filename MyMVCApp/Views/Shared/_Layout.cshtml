@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title style="display:block">Categories</title>
+	<title>@(ViewData["Title"] ?? "MVC Demo")</title>
 	<link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
 </head>
 <body class="container">
@@ -21,6 +21,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/Category/Index">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Product" asp-action="Index">Products</a>
                         </li>
                        
                     </ul>
