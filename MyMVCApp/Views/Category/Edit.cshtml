@@ -1,0 +1,38 @@
+﻿
+@using MyMVCApp.Model;
+@model Category;
+@section styles {
+    <div> Edit Categories</div>
+}
+@if(Model !=null) {
+    <form method="post" asp-controller="Category" asp-action="Edit">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="row mb-3">
+            
+                <input type="hidden" class="form-control" asp-for="id" id="inputEmail3">
+            
+        </div>
+        <div class="row mb-3">
+            <label asp-for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for="name" id="inputEmail3">
+                <span class="text-danger"  asp-validation-for="name"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label asp-for="description" class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for="description" id="inputEmail3">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="return confirm()">Sign in</button>
+    </form>
+}
+
+@section Scripts {
+<script>
+function confirm(){
+alert("vanu");
+}
+</script>
+}
